@@ -35,3 +35,6 @@ Bạn có thể sử dụng Jupyter Notebook để huấn luyện mô hình. Hã
 Ngoài việc sử dụng Jupyter Notebook, bạn có thể huấn luyện mô hình bằng cách chạy một tệp script. Hãy sử dụng lệnh sau để huấn luyện mô hình:
 
 # INFERENCE DEMO
+
+# AUTHOR
+Pham Manh - AI Engineer
