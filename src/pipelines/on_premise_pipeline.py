@@ -114,9 +114,7 @@ def prepare_training_data(data_loader, data_transformer, label_name, features_na
         
 
 if __name__ == "__main__":
-    import argparse
     from tqdm import tqdm
-    from dotenv import load_dotenv
     from src.modeling.custom.model import CatboostCustomClassifier
     from src.modeling.custom.score import MLScorer
     from src.data_processing.load_data import DataLoader
@@ -131,9 +129,6 @@ if __name__ == "__main__":
     FEATURE_COLUMNS = "*"
     LOCATION_PATH = "datasets/raw_datas/WA_Fn-UseC_-Telco-Customer-Churn.csv"
     GRID_VALUES = {'iterations': [200, 300], 'learning_rate':[0.001,.009], 'depth': [5, 10]}
-
-    # Load env
-    load_dotenv("conf/dev.env")
     
     scorer = MLScorer()
     trainer = Trainer()
@@ -156,4 +151,4 @@ if __name__ == "__main__":
                         x_val=X_val, 
                         y_val=y_val, 
                         params=params, 
-                        experiment_name="catboost-model")
+                        experiment_name=os.getenv("MLFLOW_EXPERIMENT_NAME", "defaults"))
