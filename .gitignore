@@ -1,7 +1,7 @@
 
 # C extensions
 *.so
-
+*.pyc
 # Distribution / packaging
 .Python
 build/

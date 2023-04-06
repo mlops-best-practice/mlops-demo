@@ -3,15 +3,12 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:  push
 env:
-  AWS_MFA_TOKEN_SESSION: ${{ secrets.AWS_MFA_TOKEN_SESSION }}
-  AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
-  AWS_SECRET_KEY_ID: ${{ secrets.AWS_SECRET_KEY_ID }}
   MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
 
 
 jobs:
   Explore-GitHub-Actions:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
 
@@ -60,5 +57,5 @@ jobs:
         run: |
           eval "$(conda shell.bash hook)"
           conda activate ${{ vars.CONDA_ENV_NAME }} || true
-          python -m src.pipelines.on_premise_pipeline --bucket-name  ${{ vars.DEV_AWS_BUCKET_NAME }}  --key-path  ${{ vars.DEV_AWS_BUCKET_KEY_PATH }} 
+          python -m src.pipelines.on_premise_pipeline
       - run: echo "🍏 This job's status is ${{ job.status }}."
