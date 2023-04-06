@@ -1,0 +1,64 @@
+name: Training CI
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on:  push
+env:
+  AWS_MFA_TOKEN_SESSION: ${{ secrets.AWS_MFA_TOKEN_SESSION }}
+  AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+  AWS_SECRET_KEY_ID: ${{ secrets.AWS_SECRET_KEY_ID }}
+  MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
+
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    
+    steps:
+
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Setup conda envirinment
+        run: |
+          source ~/.bashrc
+          # Name's evironment in conda
+
+      
+          ## Setup evironment conda
+          if conda env list | grep -q "^${{ vars.CONDA_ENV_NAME }}[[:space:]]"; then
+              
+              eval "$(conda shell.bash hook)"
+              # if  exited -> then: active
+              echo "Moi truong ${{ vars.CONDA_ENV_NAME }} da ton tai. Dang kich hoat moi truong..."
+              conda activate ${{ vars.CONDA_ENV_NAME }}
+          
+          else
+              
+              eval "$(conda shell.bash hook)"
+              # if not exited, then: create new -> active
+              echo "Moi truong ${{ vars.CONDA_ENV_NAME }} chua ton tai. Dang tao moi truong..."
+              conda create --name ${{ vars.CONDA_ENV_NAME }} python=${{ vars.CONDA_PYTHON_VERSION }}
+              echo "Da tao moi truong ${{ vars.CONDA_ENV_NAME }} thanh cong! Dang kich hoat moi truong..."
+
+              
+              conda activate ${{ vars.CONDA_ENV_NAME }}
+          fi
+
+          python  --version
+
+      - name: Install Dependency for ${{ vars.CONDA_ENV_NAME }} environment
+        run: |
+          eval "$(conda shell.bash hook)"
+          conda activate ${{ vars.CONDA_ENV_NAME }} || true
+
+          python -m pip install -r requirements.txt
+      - name: Execute training with 
+        
+        run: |
+          eval "$(conda shell.bash hook)"
+          conda activate ${{ vars.CONDA_ENV_NAME }} || true
+          python -m src.pipelines.on_premise_pipeline --bucket-name  ${{ vars.DEV_AWS_BUCKET_NAME }}  --key-path  ${{ vars.DEV_AWS_BUCKET_KEY_PATH }} 
+      - run: echo "🍏 This job's status is ${{ job.status }}."

@@ -1,0 +1,9 @@
+# UTILS
+python-dotenv
+mlflow
+
+# ML
+numpy
+scikit-learn
+pandas
+catboost
