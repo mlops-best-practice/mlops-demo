@@ -5,6 +5,7 @@ on:  push
 env:
   MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
   MLFLOW_EXPERIMENT_NAME: "ci_verify_training"
+  COMMIT_SHA: ${{ github.head_ref }}.${{ github.sha }}
 
 jobs:
   Explore-GitHub-Actions:

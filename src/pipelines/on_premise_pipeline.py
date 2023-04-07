@@ -47,7 +47,7 @@ class Trainer:
             # Log Feature Inportance:
             # mlflow.log_dict({"features_columns": x_train.columns, "label_colum": y_train.columns}, "feature_metadata.json")
             
-            # 3. Log model
+            # Log model
             input_sample = x_train
             output_model = model.predict(x_train)
             wrappedModel = SklearnModelWrapper(model=model)
@@ -57,6 +57,9 @@ class Trainer:
                 python_model = wrappedModel,
                 artifact_path="model",
                 signature =signature)
+            
+            # Log Tag
+            mlflow.set_tag("commit_sha", os.getenv("COMMIT_SHA"))
 
             return model
         
