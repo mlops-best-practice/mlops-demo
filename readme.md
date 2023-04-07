@@ -8,12 +8,16 @@ MLOps là một phương pháp để quản lý và triển khai các mô hình 
 Mục tiêu của ví dụ này giúp các bạn hiểu rõ về quy trình, luồng hoạt động của một dự án MLops có sự kết hợp giữa những thành viên trong một dự án Machine Learning.
 
 ## MACHINE LEARNING WORKFLOW
-ML Workflow có thể hiểu là một quy trình được sử dụng để triển khai và quản lý các mô hình học máy. Với một workflow lý tưởng, sẽ giúp phối hợp giữa khoa học dữ liệu và kỹ thuật phần mềm khi xây dựng, huấn luyện, triển khai và duy trì các mô hình học máy trở lên dễ dàng, có thể được đưa vào sản xuất một cách nhanh chóng, an toàn và hiệu quả. 
+ML Workflow có thể hiểu là một quy trình được sử dụng để triển khai và quản lý các mô hình học máy. 
+Với một workflow lý tưởng, sẽ giúp phối hợp giữa khoa học dữ liệu và kỹ thuật phần mềm khi xây dựng, huấn luyện, triển khai và duy trì các mô hình học máy trở lên dễ dàng, có thể được đưa vào sản xuất một cách nhanh chóng, an toàn và hiệu quả. 
+
 Trong Machine Workflow gồm có rất nhiều phase, mỗi phase có mục đích và nhiệm vụ khác nhau. 
+
 Trong đó, có 2 phase cơ bản nhất: Development &  Production.
 
 ###  DEVELOPMENT PHASE
 Development phase gồm các bước cần thực hiện: thu thập, phân tích (EDA), thiết kế model, tạo các thử nghiệm nhằm mục đích tìm kiếm solution giải quyết bài toán hiện tại. 
+
 Lưu ý: tại phase này chúng ta cũng nên áp dụng quy trình chuẩn Mlops tracking, quản lý các thử nghiệm, artifacts ( ví dụ file model đã training, source training,...)
 ###  PRODUCTION PHASE
 
