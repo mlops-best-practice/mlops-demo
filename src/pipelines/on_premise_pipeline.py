@@ -127,7 +127,7 @@ if __name__ == "__main__":
     
     LABEL_COLUMN = "Churn"
     FEATURE_COLUMNS = "*"
-    LOCATION_PATH = "datasets/raw_datas/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+    LOCATION_PATH = "datasets/raw_datas/churn_dataset_train.csv"
     GRID_VALUES = {'iterations': [500, 700, 1000, 1200], 'learning_rate':[0.001,.003], 'depth': [10, 16]}
     
     scorer = MLScorer()
