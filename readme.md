@@ -18,6 +18,7 @@ Trong ML WORKFLOW gồm có rất nhiều phase khác nhau, mỗi phase có mụ
 ###  PRODUCTION PHASE
 
 ## SETUP
+Lưu ý
 ### Create environments
 Chúng ta cần tạo một môi trường ảo để chạy các bước tiếp theo. Bạn có thể sử dụng conda hoặc virtualenv để tạo một môi trường ảo.
 Ví dụ, để tạo một môi trường ảo sử dụng `conda`, hãy chạy lệnh sau:
