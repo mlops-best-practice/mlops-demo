@@ -1,10 +1,21 @@
 # MLOPS DEMO
-Đây là một ví dụ về dự án MLOps đơn giản, cung cấp một số ví dụ về quy trình huấn luyện và triển khai các mô hình học máy.
+Đây là một ví dụ đơn giản về dự án MLOps, cung cấp quy trình huấn luyện và triển khai các mô hình học máy.
 
 # INTRODUCTION
+
 MLOps là một phương pháp để quản lý và triển khai các mô hình học máy trong một môi trường sản xuất. Nó kết hợp các quy trình, công cụ và kỹ thuật để tự động hóa việc huấn luyện và triển khai các mô hình.
 
-Mục tiêu của dự án này là cung cấp một ví dụ về cách triển khai MLOps trong một dự án đơn giản.
+Mục tiêu của ví dụ này giúp các bạn hiểu rõ về quy trình, luồng hoạt động của một dự án MLops có sự kết hợp giữa những thành viên trong một dự án Data Scient.
+
+# MACHINE LEARNING WORKFLOW
+
+ML WORKFLOW có thể hiểu là một quy trình được sử dụng để triển khai và quản lý các mô hình học máy. Với một workflow lý tưởng, sẽ giúp  phối hợp giữa khoa học dữ liệu và kỹ thuật phần mềm khi xây dựng, huấn luyện, triển khai và duy trì các mô hình học máy trở lên dễ dàng, có thể được đưa vào sản xuất một cách nhanh chóng, an toàn và hiệu quả. 
+
+Trong ML WORKFLOW gồm có rất nhiều phase khác nhau, mỗi phase có mục đích và nhiệm vụ khác nhau. Trong có 2 phase cơ bản nhất của một dự án Machine Learning đó là: Development &  Production.
+
+##  DEVELOPMENT PHASE
+
+##  PRODUCTION PHASE
 
 # SETUP
 ## Create environments
@@ -14,7 +25,6 @@ Ví dụ, để tạo một môi trường ảo sử dụng `conda`, hãy chạy
 ```
 conda create --name mlops-demo python=3.8
 ```
-
 
 ## Activate environments
 Khi môi trường ảo đã được tạo, bạn cần kích hoạt nó để sử dụng các gói và thư viện cài đặt trong môi trường đó.
