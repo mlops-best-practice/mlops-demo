@@ -13,10 +13,8 @@ Trong Machine Workflow gồm có rất nhiều phase, mỗi phase có mục đí
 Trong đó, có 2 phase cơ bản nhất: Development &  Production.
 
 ###  DEVELOPMENT PHASE
-Development phase gồm các bước cần thực hiện: quy trình thu thập, phân tích (EDA), thử nghiệm nhằm mục đích tìm kiếm solution giải quyết bài toán hiện tại. 
-
-Quy trình xử lý data bao gồm các công việc thu thập, thực hiện làm sạch, transform, lưu trữ dữ liệu (đơn giản nhất là tài về local).
-Quy trình thử nghiệm bao gồm: 
+Development phase gồm các bước cần thực hiện: thu thập, phân tích (EDA), thiết kế model, tạo các thử nghiệm nhằm mục đích tìm kiếm solution giải quyết bài toán hiện tại. 
+Lưu ý: tại phase này chúng ta cũng nên áp dụng quy trình chuẩn Mlops tracking, quản lý các thử nghiệm, artifacts ( ví dụ file model đã training, source training,...)
 ###  PRODUCTION PHASE
 
 ## SETUP
