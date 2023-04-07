@@ -131,7 +131,7 @@ if __name__ == "__main__":
     LABEL_COLUMN = "Churn"
     FEATURE_COLUMNS = "*"
     LOCATION_PATH = "datasets/raw_datas/churn_dataset_train.csv"
-    GRID_VALUES = {'iterations': [500, 700, 1000, 1200], 'learning_rate':[0.001,.003], 'depth': [10, 16]}
+    GRID_VALUES = {'iterations': [100, 200], 'learning_rate':[0.001,.003], 'depth': [5, 2]}
     
     scorer = MLScorer()
     trainer = Trainer()

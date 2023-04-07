@@ -18,7 +18,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - name: Setup conda envirinment
+      - name: Setup conda environment
         run: |
           source ~/.bashrc
           # Name's evironment in conda
