@@ -9,9 +9,8 @@ Mục tiêu của ví dụ này giúp các bạn hiểu rõ về quy trình, lu�
 
 ## MACHINE LEARNING WORKFLOW
 ML Workflow có thể hiểu là một quy trình được sử dụng để triển khai và quản lý các mô hình học máy. 
-Với một workflow lý tưởng, sẽ giúp phối hợp giữa khoa học dữ liệu và kỹ thuật phần mềm khi xây dựng, huấn luyện, triển khai và duy trì các mô hình học máy trở lên dễ dàng, có thể được đưa vào sản xuất một cách nhanh chóng, an toàn và hiệu quả. 
 
-Trong Machine Workflow gồm có rất nhiều phase, mỗi phase có mục đích và nhiệm vụ khác nhau. 
+Với một workflow lý tưởng, sẽ giúp phối hợp giữa khoa học dữ liệu và kỹ thuật phần mềm khi xây dựng, huấn luyện, triển khai và duy trì các mô hình học máy trở lên dễ dàng, có thể được đưa vào sản xuất một cách nhanh chóng, an toàn và hiệu quả. 
 
 Trong đó, có 2 phase cơ bản nhất: Development &  Production.
 
