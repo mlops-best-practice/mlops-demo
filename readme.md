@@ -19,7 +19,9 @@ Development phase gồm các bước cần thực hiện: thu thập, phân tíc
 
 Lưu ý: tại phase này chúng ta cũng nên áp dụng quy trình chuẩn Mlops tracking, quản lý các thử nghiệm, artifacts ( ví dụ file model đã training, source training,...)
 ###  PRODUCTION PHASE
+Gồm các bước để xây dựng, đóng gói, chạy pipelines tự động. Lúc này, các công việc của machine learning engineer xảy thực hiện các bước này.
 
+Chúng ta sẽ xử dụng các công cụ để xây dựng, đóng gói và chạy chúng như: git action, kubeflow, azure pipelines, jenkins,....
 ## SETUP
 Lưu ý
 ### Create environments
