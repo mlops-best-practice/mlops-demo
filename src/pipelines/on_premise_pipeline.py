@@ -1,5 +1,4 @@
 import os
-import json
 
 # TRACKING
 from src.modeling.custom.model import SklearnModelWrapper
@@ -8,7 +7,6 @@ import mlflow
 
 from sklearn.model_selection import train_test_split
 
-    
 class Trainer:
     def __init__(self):
         pass
@@ -27,7 +25,9 @@ class Trainer:
                 x_train, 
                 y_train
             )
-
+            # print(x_train)
+            # print(type(y_train[0]))
+            # print(type(model.predict(x_train)[0]))
             # Log metric train metrics
             train_score_results = scorer.score(model.predict(x_train), y_train)
             log_metrics(
